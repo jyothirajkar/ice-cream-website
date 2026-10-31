@@ -1,378 +1,123 @@
-```css
-/* Remove default spacing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    margin:0;
 }
-
-
-/* Whole Website */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fffaf4;
-    color: #432044;
-}
-
-
-/* Navigation Bar */
-.navbar {
-    width: 100%;
-    min-height: 80px;
-    background-color: white;
-
+.header{
+    height: 50px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    padding: 20px 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    justify-content:space-between;
 }
-
-
-/* Logo */
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-}
-
-.logo span {
-    color: #df40a8;
-}
-
-
-/* Navigation Links */
-nav {
+ul{
     display: flex;
-    gap: 30px;
+    list-style-type: none;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 600;
-
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #df40a8;
-}
-
-
-/* Hero Section */
-.hero {
-    min-height: 490px;
-
-    background: linear-gradient(
-        120deg,
-        #f9cddd,
-        #e8b9e5
-    );
-
+.icon_area{
+    margin-left: 10px;
     display: flex;
-    flex-direction: column;
+    align-items:center;
+    gap: 10px;
+}
+.icon-name{
+    font-weight: bolder;
+}
+.menu_area{
+    margin-right: 10px;
+
+}
+li{
+   padding: 5px;
+   border-radius:2px;
+   transition: transfrom 0.5s, background-color 0.5s; 
+
+}
+li:hover{
+    transform: scale(1.1);
+    background-color: aliceblue;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+.main_content{
+    background-image: url('images (12).jpg');
+    height:500px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align:center;
+    display:flex;
     justify-content: center;
     align-items: center;
-
-    text-align: center;
-    padding: 60px 20px;
-
-    border-radius: 0 0 50% 50% / 0 0 8% 8%;
+    flex-direction:column;
+flex-wrap: wrap;
 }
-
-
-/* Main Heading */
-.hero h1 {
-    font-size: 52px;
-    margin-bottom: 25px;
-    color: #431a43;
-}
-
-
-/* Hero Description */
-.hero p {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #684365;
-    margin-bottom: 30px;
-}
-
-
-/* Explore Button */
-.hero-btn {
-    display: inline-block;
-
-    background-color: #df40a8;
-    color: white;
-
-    padding: 18px 40px;
-    border-radius: 40px;
-
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-
-    transition: 0.3s;
-}
-
-.hero-btn:hover {
-    background-color: #bc278b;
-    transform: translateY(-3px);
-}
-
-
-/* Flavors Section */
-.flavors {
-    padding: 75px 5%;
-}
-
-
-/* Section Heading */
-.section-heading {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 55px;
-}
-
-.section-heading h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #451d49;
-}
-
-.section-heading p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #888;
-}
-
-
-/* Cards Layout */
-.card-container {
-    display: grid;
-
-    /* Three cards in each row */
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    gap: 35px;
-    max-width: 1300px;
-    margin: auto;
-}
-
-
-/* Individual Card */
-.card {
-    background-color: white;
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-
-/* Card Hover Effect */
-.card:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-
-/* Card Images */
-.card img {
+.services {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 290px;
+    margin-top: 20px;
+    justify-content: space-evenly;
 
-    object-fit: cover;
-    display: block;
 }
-
-
-/* Card Content */
-.card-content {
-    padding: 25px 30px;
+.services_heading{
+   text-align: center;
 }
-
-
-/* Ice Cream Name */
-.card-content h3 {
-    font-size: 23px;
-    margin-bottom: 15px;
-    color: #48204b;
+.card1,.card2,.card3,.card_img1,.card_img2,.card_img3{
+  max-width: 300px;
+  border: 1px solid black;
+  text-align: center;
+   border-radius: 5px;
 }
+.about_us{
+    display: flex;
+     padding-top: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color:aliceblue;
+    justify-content: space-evenly;
+   
 
-
-/* Price */
-.card-content h4 {
-    font-size: 21px;
-    color: #df40a8;
-    margin-bottom: 20px;
 }
-
-
-/* Description */
-.card-content p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #888;
-
-    margin-bottom: 20px;
+.side_img{
+    max-width: 400px;
+    
+    
 }
-
-
-/* Category Labels */
-.tag {
-    display: inline-block;
-
-    padding: 10px 17px;
-    border-radius: 25px;
-
-    font-size: 14px;
-    font-weight: 600;
+.side_text{
+    max-width:500px;
+    text-align:justify;
 }
-
-
-/* Different Tag Colors */
-.classic {
-    background-color: #fce1eb;
-    color: #d81b60;
+.g1,.g2,.g3,.g4,.g5,.g6{
+    max-width: 400px;
+    cursor: pointer;
+    transition: transform 1s;
 }
-
-.fruity {
-    background-color: #fff0d8;
-    color: #ef6c00;
+.g1:hover,.g2:hover,.g3:hover,.g4:hover,.g5:hover,.g6:hover{
+transform: scale(1.1);
 }
-
-.premium {
-    background-color: #eee3f8;
-    color: #8e24aa;
-}
-
-.fresh {
-    background-color: #dff5e8;
-    color: #16834a;
-}
-
-.caramel {
-    background-color: #ffeadb;
-    color: #a34b16;
-}
-
-.berry {
-    background-color: #f9dff0;
-    color: #ad2379;
-}
-
-
-/* Locations Section */
-.info-section {
+.gallery_text{
+    position: absolute;
+    width: 100%;
+    font-size:2rem ;
     text-align: center;
-    padding: 65px 20px;
-    background-color: #fff0f7;
+    margin-top:80px ;
 }
-
-.info-section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.footer{
+    text-align:center ;
+    background-color: rgb(54 ,28 ,28);
+    color:white ;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items:center ;
 }
-
-.info-section p {
-    font-size: 17px;
-    color: #777;
-    line-height: 1.7;
-}
-
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 35px 20px;
-
-    background-color: #432044;
-    color: white;
-}
-
-footer h2 {
-    margin-bottom: 12px;
-}
-
-footer p {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-
-/* Tablet Screen */
-@media (max-width: 900px) {
-
-    .card-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .card img {
-        height: 250px;
-    }
-
-}
-
-
-/* Mobile Screen */
-@media (max-width: 600px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav {
+/*@media only screen and(max-width:700px){
+    gallery{
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
     }
-
-    .hero {
-        min-height: 400px;
-        padding: 50px 20px;
+    .side_text{
+        padding:10px;
     }
+}*/
 
-    .hero h1 {
-        font-size: 32px;
-    }
 
-    .hero p {
-        font-size: 16px;
-    }
-
-    .section-heading h2 {
-        font-size: 28px;
-    }
-
-    .section-heading p {
-        font-size: 16px;
-    }
-
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-
-    .card img {
-        height: 250px;
-    }
-
-    .card-content {
-        padding: 22px;
-    }
-
-}
-```
